@@ -14,7 +14,7 @@ class ReCaptchaV3 extends React.PureComponent {
       return new Promise((resolve) => {
         setTimeout(() => {
           resolve(this.state.token);
-        }, 1000);
+        }, 2000);
       });
     };
   }
