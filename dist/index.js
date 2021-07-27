@@ -10,10 +10,11 @@ class ReCaptchaV3 extends React.PureComponent {
     };
 
     this.getCaptcha = () => {
+      const nomalState = this;
       this._captchaRef.refreshToken();
       return new Promise((resolve) => {
         setTimeout(() => {
-          resolve(this.state.token);
+          resolve(nomalState?.state?.token || "");
         }, 2000);
       });
     };
